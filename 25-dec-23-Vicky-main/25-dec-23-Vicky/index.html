@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangle Calculation</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="welcome">
+   <h1>WELCOME TO Trical</h1>
+   <p>Selamat Datang Di Trical. Cara Cepat Menghitung Luas dan Keliling Segiiga</p>
+  </div>
+
+  <div class="page-container">
+    <div class="container">
+
+      <h2>LUAS SEGITIGA</h2>
+
+      <div class="formula-container">
+
+         <div class="text-rumus">
+        <div class="image-container">
+            <img src="assets/luas-segitiga.jpg" alt="Rumus Segitiga">
+        </div>
+    </div>
+
+      </div>
+
+        <h1>Hitung Luas Segitiga</h1>
+
+        <form id="triangleForm">
+            
+            <label for="sideA">Nilai Alas</label>
+            <input type="text" id="sideA" required>
+        
+            <label for="sideB">Nilai Tinggi</label>
+            <input type="text" id="sideB" required>
+            
+        </form>
+
+        <div class="button-container">
+        <button class="buttons">
+            <span type="button" value="Hitung" onclick="Hitungluas()">Hitung Luas</span>
+        </button>
+        </div>
+
+        <button class="Btn" onclick="resetForm()">
+            <div class="sign">
+              <svg
+                viewBox="0 0 16 16"
+                class="bi bi-trash3-fill"
+                fill="currentColor"
+                height="18"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5"
+                ></path>
+              </svg>
+            </div>
+          
+            <div class="text">Reset</div>
+          </button>     
+
+        <!-- Display result -->
+        <div id="result"></div>
+    </div>
+
+
+
+
+    <!-- Keliling Segitiga -->
+
+    <div class="keliling">
+    <div class="container">
+
+      <h2>KELILING SEGITIGA</h2>
+  
+      <div class="formula-container">
+  
+          <div class="text-rumus">
+              <div class="image-container">
+                  <img src="assets/keliling-segitiga.jpg" alt="Rumus Segitiga">
+              </div>
+          </div>
+  
+      </div>
+  
+      <h1>Hitung Keliling Segitiga</h1>
+  
+      <form id="trianglePerimeterForm">
+  
+          <label for="sideA">Nilai S1</label>
+          <input type="text" id="perimeterSideA" required>
+  
+          <label for="sideB">Nilai S2</label>
+          <input type="text" id="perimeterSideB" required>
+  
+          <label for="sideC">Nilai S3</label>
+          <input type="text" id="perimeterSideC" required>
+  
+      </form>
+  
+      <div class="button-container">
+          <button class="buttons">
+              <span type="button" onclick="calculatePerimeter()">Hitung Keliling</span>
+          </button>
+      </div>
+
+      <button class="Btn" onclick="resetPerimeterForm()">
+          <div class="sign">
+              <svg
+                  viewBox="0 0 16 16"
+                  class="bi bi-trash3-fill"
+                  fill="currentColor"
+                  height="18"
+                  width="18"
+                  xmlns="http://www.w3.org/2000/svg"
+              >
+              <path
+              d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5"
+            ></path>
+              </svg>
+          </div>
+  
+          <div class="text">Reset</div>
+      </button>
+  
+      <!-- Display result -->
+      <div id="perimeterResult"></div>
+  </div>
+</div>
+  </div>
+
+    <script src="js/proyek.js"></script>
+</body>
+</html>
